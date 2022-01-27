@@ -1,0 +1,15 @@
+{
+    "name": "dema/mon-framwork",
+    "description": "projet perso",
+    "autoload": {
+        "psr-4":{
+            "Framwork\\":"src/Framwork"
+        }
+    },
+    "require": {
+        "guzzlehttp/psr7": "1.4.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
