@@ -21,9 +21,11 @@ class App
             $response = $response->withHeader('location:', substr($uri,0,-1));
             return $response;
         }
-        $response = new Response(); //Response une implementation de Guzzle
-        $response->getBody()->write('Bonjour tout le monde ');
-        return $response;
+        if ($uri === '/blog'){
+            return new Response(200,[],'<h1>Bienvenue sur le blog</h1>');
+        }
+          else  return new Response(404,[],'<h1>Bonjour tout le monde </h1>');
+    
        
     }
 }
